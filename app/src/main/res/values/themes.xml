@@ -1,0 +1,9 @@
+<resources>
+    <style name="Base.Theme.TravelAI" parent="Theme.Material3.Light.NoActionBar">
+        <item name="colorPrimary">@color/green_primary</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/background</item>
+        <item name="android:windowLightStatusBar">true</item>
+    </style>
+    <style name="Theme.TravelAI" parent="Base.Theme.TravelAI" />
+</resources>
