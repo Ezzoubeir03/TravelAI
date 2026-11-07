@@ -1,13 +1,16 @@
 package com.example.travelai;
-import com.bumptech.glide.Glide;
+
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.List;
 
@@ -36,8 +39,12 @@ public class DestinationAdapter extends RecyclerView.Adapter<DestinationAdapter.
                 .load(d.getImageRes())
                 .centerCrop()
                 .into(holder.image);
-        holder.itemView.setOnClickListener(v ->
-                Toast.makeText(v.getContext(), d.getName() + " selected", Toast.LENGTH_SHORT).show());
+
+        holder.itemView.setOnClickListener(v -> {
+            Intent i = new Intent(v.getContext(), DestinationDetailActivity.class);
+            i.putExtra(DestinationDetailActivity.EXTRA_NAME, d.getName());
+            v.getContext().startActivity(i);
+        });
     }
 
     @Override

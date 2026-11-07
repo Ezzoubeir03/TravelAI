@@ -10,4 +10,9 @@
     <color name="text_primary">#1F2A22</color>
     <color name="text_secondary">#7C877F</color>
     <color name="divider">#E6EBE6</color>
+
+    <color name="map_bg">#E8EEE8</color>
+    <color name="map_road">#FFFFFF</color>
+    <color name="map_water">#D3E3EA</color>
+    <color name="map_marker">#4A524C</color>
 </resources>

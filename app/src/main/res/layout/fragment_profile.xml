@@ -1,13 +1,117 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:scrollbars="none">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Profile"
-        android:textColor="@color/text_primary"
-        android:textSize="22sp" />
-</FrameLayout>
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/playfair_display_regular"
+            android:text="Profile"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp" />
+
+        <FrameLayout
+            android:layout_width="124dp"
+            android:layout_height="124dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp">
+
+            <TextView
+                android:id="@+id/tv_initial"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_circle_light"
+                android:fontFamily="@font/playfair_display_regular"
+                android:gravity="center"
+                android:textColor="@color/green_primary"
+                android:textSize="48sp" />
+
+            <ImageView
+                android:id="@+id/iv_photo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:background="@drawable/bg_circle_white"
+                android:clipToOutline="true"
+                android:scaleType="centerCrop"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/btn_camera"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="bottom|end"
+                android:background="@drawable/bg_circle_green"
+                android:padding="9dp"
+                android:src="@drawable/ic_camera" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/playfair_display_regular"
+            android:textColor="@color/text_primary"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="2dp"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/tv_since"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_banner"
+            android:paddingStart="16dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="6dp"
+            android:textColor="@color/green_dark"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:id="@+id/profile_rows"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/btn_logout"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/bg_logout"
+            android:drawableStart="@drawable/ic_logout"
+            android:drawablePadding="10dp"
+            android:gravity="center"
+            android:paddingStart="110dp"
+            android:paddingEnd="110dp"
+            android:text="Log out"
+            android:textColor="#C0392B"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</ScrollView>

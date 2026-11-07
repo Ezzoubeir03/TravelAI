@@ -6,4 +6,16 @@
         <item name="android:windowLightStatusBar">true</item>
     </style>
     <style name="Theme.TravelAI" parent="Base.Theme.TravelAI" />
+
+    <style name="TravelInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">16dp</item>
+        <item name="boxCornerRadiusTopEnd">16dp</item>
+        <item name="boxCornerRadiusBottomStart">16dp</item>
+        <item name="boxCornerRadiusBottomEnd">16dp</item>
+        <item name="boxStrokeColor">@color/box_stroke</item>
+        <item name="hintTextColor">@color/green_primary</item>
+        <item name="boxBackgroundColor">@color/card_white</item>
+        <item name="startIconTint">@color/text_secondary</item>
+        <item name="endIconTint">@color/text_secondary</item>
+    </style>
 </resources>
